@@ -5,14 +5,13 @@ const prev = document.querySelector('.previous');
 
 
 // event listeners
-play.addEventListener('click',()=>{
-if(audio.paused)
-{
-  audio.play()
-}
-else
-{
-  audio.pause()
-}
+play.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    play.innerHTML = `<img src="pause.png" alt="Pause" height="20px">`;
+  } else {
+    audio.pause();
+    play.innerHTML = `<img src="play-button-arrowhead.png" alt="Play" height="20px">`;
+  }
 })
 
